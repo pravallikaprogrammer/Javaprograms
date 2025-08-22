@@ -1,0 +1,65 @@
+1.Library program:
+class Library{
+	public static void main(String[] args){
+		int day=15;
+		if (day == 1){
+			System.out.println("No Fine Charged.");
+		}else if (day >= 2 && day <= 5){
+			System.out.println("The Fine Amount 50rs Will be Charged.");
+		}else if (day >= 6 && day <= 10){
+			System.out.println("The Fine Amount 100rs Will be Charged.");
+		}else if (day >= 11 && day <= 30){
+			System.out.println("The Fine Amount 150rs Will be Charged.");
+		}else{
+			System.out.println("My Library Membership Will be Terminated.");
+		}
+	}
+}
+Output:
+The Fine Amount 150rs Will be Charged.
+
+2.Lab Program:
+import java.util.Scanner;
+
+class Lab {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);      
+        System.out.println("Enter the time you entered in the lab (in minutes):");
+        int time = sc.nextInt(); 
+        boolean Laab=true;
+        if (time < 555 && Laab) {
+            System.out.println("Allowed to the Lab.");
+        } else if (time >= 555 && time <= 560 && Laab) {
+            System.out.println("Faculty gives a warning and allows entry to the Lab.");
+        } else {
+            System.out.println("Not Allowed to the Lab.");
+        }
+        sc.close();
+    }
+}
+Output:
+Enter the time you entered in the lab (in minutes):
+570 
+Not Allowed to the Lab.
+
+3.college program
+class College{
+	public static void main(String[] args){
+		int time=556;
+		//time=570 represents 9:30 AM in minutes.
+		//can be calculated as 9*60=540+30=570
+		boolean Lab=true;
+		if (time<=555 && Lab){ 
+		//9:15 AM can be calculated as 9*60=540+15=555
+		//time>=555 checks if the time is at or after 9:15 AM.
+			System.out.println("Allowed to the Lab.");
+		}else if (time<=560 && time>=555 && Lab){
+			System.out.println("Faculty give the Warning and Allowed to the Lab.");
+		}else{
+			System.out.println("Not Allowed to the Lab.");
+		}
+	}
+}
+Output:
+Faculty give the Warning and Allowed to the Lab.
+
