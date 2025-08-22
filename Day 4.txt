@@ -1,0 +1,85 @@
+1.sum and break:
+import java.util.Scanner;
+class Sum_Break {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the number:");
+        int n=sc.nextInt();
+        int sum=0;
+        for(int i=0;i<n;i++){
+			System.out.print("Enter the number:");
+            int b=sc.nextInt();
+            if(b<0){
+                break;
+            }else{
+                sum += b;
+            }
+        System.out.println(sum);
+        }
+        sc.close();
+    }
+}
+Output:
+Enter the number:20
+Enter the number:30
+30
+Enter the number:20
+50
+Enter the number:30
+80
+Enter the number:-20
+
+2.Sum And Continue:
+import java.util.Scanner;
+class Sum_Continue{
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=5;
+        int sum=0;
+        for(int i=0;i<5;i++){
+            System.out.print("Enter the number:");
+            int b=sc.nextInt();
+            if(b<0){
+                continue;
+            }else{
+                sum -= b;
+            }
+        }
+        System.out.print(sum);
+    }
+}
+Output:
+Enter the number:2
+Enter the number:2
+Enter the number:8
+Enter the number:94
+Enter the number:-20
+-106
+
+3.Vowels using Swich Case
+class Switch{
+	public static void main(String[] args){
+		char ch='b';
+		switch (ch){
+			case 'a':
+				System.out.print("it's a vowel.");
+				break;
+			case 'e':
+				System.out.print("its' a vowel.");
+				break;
+			case 'i':
+				System.out.print("it's a vowel.");
+				break;
+			case 'o':
+				System.out.print("it's a vowel.");
+				break;
+			case 'u':
+				System.out.print("it's a vowel.");
+				break;
+			default:
+				System.out.print("it's not a vowel.");
+		}
+	}
+}
+Output:
+it's not a vowel.
