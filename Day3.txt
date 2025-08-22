@@ -1,0 +1,125 @@
+1.Atm program using Swich Statement:
+import java.util.*;
+class ATM {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int pwd=2005;
+        float Balance=50000.00f;
+        int Withdraw;
+        int Diposit;
+        for(int i=3;i>=1;i--){
+            System.out.print("Enter your cuurent password:");
+            int currentpwd=sc.nextInt();
+            if(pwd==currentpwd){
+                System.out.print("Welcome to Srinu bank ATM.\n");
+                System.out.print("Please Select one:\n 1.Check Balance \n 2.Withdraw\n 3.Diposit\n");
+                while(true){
+                 int choice=sc.nextInt();
+                switch(choice){
+                    case 1:
+                        System.out.println("Your Balance:"+Balance);
+                        break;
+                    case 2:
+                        System.out.print("Enter the Withdraw Amount:");
+                       float a=sc.nextFloat();
+                       if(a<=Balance){
+                         System.out.println("Available Amount in your Account:"+(Balance-a));
+                       break;
+                       }else{
+                           System.out.print("Insufficient funds in your Account");
+                           break;
+                       }
+                      case 3:
+                          System.out.print("Enter the Diposit Amount:");
+                       float b=sc.nextFloat();
+                       System.out.println("Deposited Amount in your Account Sucessfully\nAvailable Amount in your Account:"+(Balance+b));
+                       break;
+                      case 4:
+                          System.out.println("Thank you visit Again..!");
+                          break;
+                      default:
+                        System.out.println("You have entered invalid option.\nplease choose valid option");
+                }if(choice==4){
+                    break;
+                }
+                }
+                break;
+            }else{
+                if(i==1){
+                    System.out.println("Try Again After 24Hours..!");
+                    break;
+                }
+                System.out.println("You have Entered Wrong password.You have " +(i-1)+ " attemps left");
+            }
+        }
+    }
+}
+Output:
+Enter your cuurent password:2005
+Welcome to Srinu bank ATM.
+Please Select one:
+ 1.Check Balance 
+ 2.Withdraw
+ 3.Diposit
+5
+You have entered invalid option.
+please choose valid option.
+
+2.Mutiplication of Matrix:
+
+import java.util.Scanner;
+class Mul_Matrix{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int i,j,r,c;
+        System.out.println("Enter the Rows:");
+        r = sc.nextInt();
+        System.out.println("Enter the Columns:");
+        c = sc.nextInt();
+        int[][] a = new int[r][c];
+        int[][] b = new int[r][c];
+        int[][] result = new int[r][c];
+        System.out.println("Matrix of A:");
+        for(i = 0; i < r; i++){
+            for(j = 0; j < c; j++){
+                System.out.print("Enter the a["+i+"]["+j+"]:");
+                a[i][j] = sc.nextInt();
+            }
+        }
+        System.out.println("Matrix of B:");
+        for(i = 0; i < r; i++){
+            for(j = 0; j < c; j++){
+                System.out.print("Enter the b["+i+"]["+j+"]:");
+                b[i][j] = sc.nextInt();
+            }
+        }
+        for(i = 0; i < r; i++){
+            for(j = 0; j < c; j++){
+               // result[i][j] = 0;
+                for(int k = 0; k < c; k++){
+                    result[i][j] += a[i][k] * b[k][j];
+                }
+                System.out.print(result[i][j]+" ");
+            }
+            System.out.println();
+        }
+        sc.close();
+    }
+}
+Output:
+Enter the Rows:
+2
+Enter the Columns:
+2
+Matrix of A:
+Enter the a[0][0]:2
+Enter the a[0][1]:2
+Enter the a[1][0]:2
+Enter the a[1][1]:2
+Matrix of B:
+Enter the b[0][0]:3
+Enter the b[0][1]:3
+Enter the b[1][0]:3
+Enter the b[1][1]:3
+12 12 
+12 12
