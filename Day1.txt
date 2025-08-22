@@ -1,0 +1,77 @@
+1.Basic Java Program :
+Program: 
+class add { 
+    public static void main(String[] args) {
+         System.out.println("Welcome to java"); 
+    } 
+} 
+Output: 
+Welcome to java 
+
+2.Command Line Arguments in Java :
+Program: 
+class command{ 
+    public static void main(String args[]) 
+    { 
+        for(int i=0; i<args.length;i++) 
+        { 
+            System.out.println(args[i]); 
+        } 
+    } 
+} 
+Sample Execution: java 
+command Hello World Java 
+Output: 
+Hello 
+World Java 
+
+3.Comments in Java :
+Types of Comments: 
+1.	Single Line Comments: // This is a single line comment 
+2.	Multi-line Comments: /* This is a multi-line comment */ 
+Java Overview (from comments): 
+Java is a programming language and computing platform first released by Sun Microsystems in 1995.
+
+4.Variables in Java Program: 
+public class Variables { 
+    public static void main(String[] args) { 
+        String name = "Saravanan";
+         int age = 25;
+         float percent = 89.9f;
+         char gender = 'M';
+         boolean married = false; 
+         
+        System.out.println("Name  :" + name); 
+        System.out.println("Age   : " + age); 
+        System.out.println("percent  : " + percent); 
+        System.out.println("Gender   : " + gender);
+         System.out.println("Married   : " + married); 
+    }
+ } 
+Output: 
+Name  :Balu 
+Age   : 19 
+percent  : 89.9 
+Gender   : M 
+Married   : false 
+Data Types: 
+•	String: Text data 
+•	int: Integer numbers 
+•	float: Decimal numbers (requires 'f' suffix) 
+•	char: Single character (in single quotes) 
+•	boolean: true/false values 
+
+5. Type Casting :
+Widening Casting (Automatic): byte -> short -> char -> int -> long -> float -> double 
+Narrowing Casting (Manual): double -> float -> long -> int -> char -> short -> byte 
+Program : Integer to Double (Widening) 
+class casting { 
+    public static void main(String[] args) {         int a = 10;         double b = a; 
+        System.out.println("Int  :" + a); 
+        System.out.println("Double  :" + b); 
+    } } 
+Output: 
+Int  :10 
+Double  :10.0 
+
+ 
