@@ -1,0 +1,80 @@
+1.prime number
+
+
+class P_number {
+    public static void main(String[] args) {
+        int num=6;
+        int sum=0;
+        for(int i=1;i<num;i++){
+            if(num%i==0){
+                sum +=i;
+            }
+        }
+        if(num==sum){
+            System.out.println("perfect number"+num);
+        }else{
+            System.out.println("perfect number"+num);
+        }
+    }
+}
+Output:
+perfect number 6
+
+2.
+import java.util.Scanner;
+class Palindrome_Number {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=1221;
+        int rev=0;
+        int d;
+        int temp=n;
+        while(n>0){
+            d=n%10;
+            rev = rev*10+d;
+            n /=10;
+        }
+        if(rev==temp){
+            System.out.println("Palindrome Number: "+rev);
+        }else{
+            System.out.println("Palindrome number: "+rev);
+        }
+        System.out.println();
+    }
+}
+Output:
+Palindrome Number: 1221
+
+3.Number
+import java.util.Scanner;
+class Num {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the Rows :");
+        int n = sc.nextInt();
+        int c = 65;
+        for(int i=1;i <= n;i++){
+            for(int j=1; j <= i ;j++){
+                System.out.print((char)(c));
+                c +=3;
+            }
+        System.out.println();
+        }
+    }
+}
+Output:
+Enter the Rows :5
+A
+DG
+JMP
+SVY\
+_behk
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+1.
+class RelationalDemo{
+	public static void main(String[] args){
+		int x=5,y=10;
+		System.out.println("x==y:"+(x==y));
+		System.out.println("x!=y:"+(x!=y));
+		System.out.println("x>y:"+(x>y));
+		System.out.println("x<y:"+(x<y));
+		System.out.println("x>=y:"+(x>=y));
+		System.out.println("x<=y:"+(x<=y));
+	}
+}
+Output:
+x==y:false
+x!=y:true
+x>y:false
+x<y:true
+x>=y:false
+x<=y:true
+
+2.
+
+import java.util.Scanner;
+class mul_array{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        int i,r,j,c;
+        System.out.println("Enter the Rows:");
+        r = sc.nextInt();
+        System.out.println("Enter the Column:");
+        c = sc.nextInt();
+        int[][] a = new int[r][c];
+        int[][] b = new int[r][c];
+        int[][] result = new int[r][c];
+
+        for(i = 0; i < r; i++){
+            for(j = 0; j < c; j++){
+                System.out.println("Enter the a["+i+"]["+j+"]:");
+                a[i][j] = sc.nextInt();
+            }
+        }
+        for(i = 0; i < r; i++){
+            for(j = 0; j < c; j++){
+                System.out.println("Enter the b["+i+"]["+j+"]:");
+                b[i][j] = sc.nextInt();
+            }
+        }
+        for(i = 0; i < r; i++){
+            for(j = 0; j < c; j++){
+                result[i][j] = a[i][j] + b[i][j];
+                System.out.print(result[i][j]+" ");
+            }
+            System.out.println();
+        }
+    }
+}
+Output:
+Enter the Rows:
+3
+Enter the Column:
+3
+Enter the a[0][0]:
+2
+Enter the a[0][1]:
+2
+Enter the a[0][2]:
+2
+Enter the a[1][0]:
+2
+Enter the a[1][1]:
+2
+Enter the a[1][2]:
+2
+Enter the a[2][0]:
+2
+Enter the a[2][1]:
+2
+Enter the a[2][2]:
+2
+Enter the b[0][0]:
+2
+Enter the b[0][1]:
+2
+Enter the b[0][2]:
+2
+Enter the b[1][0]:
+3
+Enter the b[1][1]:
+3
+Enter the b[1][2]:
+3
+Enter the b[2][0]:
+3
+Enter the b[2][1]:
+3
+Enter the b[2][2]:
+3
+4 4 4 
+5 5 5
+5 5 5
+
+3
+
+import java.util.Scanner;
+class Opps{
+    public static void main(String[] args){
+        Scanner sc = new Scanner(System.in);
+        // int b[] ;//Declaring array
+        // b = new int[];//Allocating memory to array
+        System.out.print("Enter the Size of Array:");
+        int n = sc.nextInt();
+        int[] c = new int[n];
+        for (int i = 0; i < n; i++) {
+            System.out.println("Enter the value:");
+            c[i] = sc.nextInt();
+        }
+        System.out.print("{");
+        for (int v : c ){
+            System.out.print(v+" ");
+            
+        }
+        System.out.print("}");
+    }
+}
+Output:
+Enter the Size of Array:5
+Enter the value:
+5
+Enter the value:
+5
+Enter the value:
+5
+Enter the value:
+5  
+Enter the value:
+5
+{5 5 5 5 5 }

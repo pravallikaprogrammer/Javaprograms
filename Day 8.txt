@@ -1,0 +1,76 @@
+1.
+
+import java.util.Scanner;
+class Num {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the Rows :");
+        int n = sc.nextInt();
+        int count=1;
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=n;j++){
+                System.out.print("["+i+j+"]");
+            }
+     System.out.println();
+ 
+        }
+
+}
+Output:
+Enter the Rows :5
+[11][12][13][14][15]
+[21][22][23][24][25]
+[31][32][33][34][35]
+[41][42][43][44][45]
+[51][52][53][54][55]
+
+2.
+public class StarArtDynamic {
+    public static void main(String[] args) {
+        String text = "BALA BRAHMA MAHESWAR";
+        int height = 7;
+
+        for (int row = 0; row < height; row++) {
+            for (int i = 0; i < text.length(); i++) {
+                char ch = text.charAt(i);
+                if (ch == ' ') {
+                    System.out.print("      ");
+                    continue;
+                }
+                for (int col = 0; col < 5; col++) {
+                    if (ch == 'A' && ((row == 0 && col == 2) || (row == 1 && (col == 1 || col == 3)) || (row == 2 && (col == 0 || col == 4)) || row == 3 || (row > 3 && (col == 0 || col == 4))))
+                        System.out.print("*");
+                    else if (ch == 'B' && (col == 0 || (row == 0 || row == 3 || row == 6) && col < 4 || col == 4 && row != 3))
+                        System.out.print("*");
+                    else if (ch == 'L' && (col == 0 || row == 6))
+                        System.out.print("*");
+                    else if (ch == 'R' && (col == 0 || (row == 0 || row == 3) && col < 4 || col == 4 && row < 3 || row - col == 1 && row > 3))
+                        System.out.print("*");
+                    else if (ch == 'M' && (col == 0 || col == 4 || (row == 1 && (col == 1 || col == 3)) || (row == 2 && col == 2)))
+                        System.out.print("*");
+                    else if (ch == 'H' && (col == 0 || col == 4 || row == 3))
+                        System.out.print("*");
+                    else if (ch == 'E' && (row == 0 || row == 3 || row == 6 || col == 0))
+                        System.out.print("*");
+                    else if (ch == 'S' && (row == 0 || row == 3 || row == 6 || (row < 3 && col == 0) || (row > 3 && col == 4)))
+                        System.out.print("*");
+                    else if (ch == 'W' && (col == 0 || col == 4 || (row == 5 && (col == 1 || col == 3)) || (row == 6 && col == 2)))
+                        System.out.print("*");
+                    else
+                        System.out.print(" ");
+                }
+                System.out.print("  "); // space between letters
+            }
+            System.out.println();
+        }
+    }
+}
+Output:
+*****    *    *        *          *****  *****    *    *   *  *   *    *          *   *    *    *   *  *****  *****  *   *    *    *****  
+*   *   * *   *       * *         *   *  *   *   * *   *   *  ** **   * *         ** **   * *   *   *  *      *      *   *   * *   *   *  
+*   *  *   *  *      *   *        *   *  *   *  *   *  *   *  * * *  *   *        * * *  *   *  *   *  *      *      *   *  *   *  *   *  
+****   *****  *      *****        ****   ****   *****  *****  *   *  *****        *   *  *****  *****  *****  *****  *   *  *****  ****   
+*   *  *   *  *      *   *        *   *  *  *   *   *  *   *  *   *  *   *        *   *  *   *  *   *  *          *  *   *  *   *  *  *   
+*   *  *   *  *      *   *        *   *  *   *  *   *  *   *  *   *  *   *        *   *  *   *  *   *  *          *  ** **  *   *  *   *
+*****  *   *  *****  *   *        *****  *      *   *  *   *  *   *  *   *        *   *  *   *  *   *  *****  *****  * * *  *   *  *
+

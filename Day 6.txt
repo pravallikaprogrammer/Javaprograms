@@ -1,0 +1,45 @@
+1.Arthemetic:
+
+class ArithmeticDemo{
+	public static void main(String[] args){
+		int a=8,b=7;
+		System.out.println("Arithmetic Operators in java:");
+		System.out.println("Addition:"+(a+b));
+		System.out.println("Subtraction:"+(a-b));
+		System.out.println("Multiplication:"+(a*b));
+		System.out.println("Division:"+(a/b));
+		System.out.println("Modulus:" + (a%b));
+	}
+}
+Output:
+Arithmetic Operators in java:
+Addition:15
+Subtraction:1
+Multiplication:56
+Division:1
+Modulus:1
+
+2.ArmStrong number:
+import java.util.Scanner;
+class Armstrong {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=142;
+        int sum=0;
+        int r;
+        int temp=n;
+        while(n>0){
+            r=n%10;
+            sum += r*r*r;
+            n /=10;
+        }
+        if(sum==temp){
+            System.out.println("Armstrong number: "+sum);
+        }else{
+            System.out.println("Not Armstrong number: "+sum);
+        }
+        System.out.println();
+    }
+}
+Output:
+Not Armstrong number: 73
